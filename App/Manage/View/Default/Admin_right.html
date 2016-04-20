@@ -1,0 +1,75 @@
+<include file="Admin:header" />
+<link href="__PUBLIC__/css/pintuer.css" rel="stylesheet" type="text/css" />
+<script src="__PUBLIC__/js/pintuer.js"></script>
+<script src="__PUBLIC__/js/jquery.js"></script>	
+<style type="text/css">
+	html{_overflow-y:scroll}
+</style>
+<div class="right_style">
+
+<div class="column">
+	<dl class="dbox winbg1" id="item3">
+	    <dt class="lside">
+	        <div class="l">我的个人信息</div>
+	    </dt>
+	    <dd>
+			<div class="content">
+				您好，<{$v.admin_name}><br/>
+				<div class="clear"></div>
+				上次登录时间：<{$v.admin_olddate|date='Y-m-d H:i:s',###}><br/>
+				上次登录IP：<{$v.admin_oldip}><br/> 登录次数：<{$v.admin_login}> <br/>
+			</div>
+	    </dd>
+	</dl>
+
+	<dl class="dbox winbg1" id="item5">
+	    <dt class="lside"><span class="l">站点统计</span></dt>
+	    <dd>
+			<div class="content">
+			会员：<{$countUser}> <br>
+			内容：<{$countNews}> <br>
+			留言本：<{$countGuestbook}> <br>
+			广告：<{$countAdvert}> <br>
+			公告：<{$countNotice}> <br>
+			数据库：<{$total}><br>
+			
+			</div>
+	    </dd>
+	</dl>
+
+	
+</div>
+
+<div class="column_right">
+
+	<dl class="dbox winbg2" id="item1">
+	    <dt class="lside"><span class="l">系统信息</span></dt>
+	    <dd>
+	        <div class="content">
+	程序版本：DTCMS1.0<br />
+
+	操作系统：<?php echo PHP_OS; ?><br />
+	php版本：<?php echo "PHP".PHP_VERSION; ?><br />
+	MySQL 版本：<?php echo mysql_get_server_info(); ?><br />
+	服务器时间：<?php echo $showtime=date("Y-m-d H:i:s");?><br />
+
+          </div>
+	    </dd>
+	</dl>
+	
+	<dl class="dbox winbg5" id="item2">
+	    <dt class="lside"><span class="l">DTCMS系统开发团队</span></dt>
+	    <dd>
+	        	        <div class="content">
+			版权所有：<a href="http://www.dt0572.net" target="_blank">湖州道田文化传播有限公司</a><br />
+			官方网站：<a href="http://www.dt0572.com" target="_blank">http://www.dt0572.com</a><br />
+	    <!--	DTCMS官方：<a href="http://www.DTCMS.com/" target="_blank">http://www.DTCMS.com/</a> <br />
+			官方QQ群：<a href="http://jq.qq.com/?_wv=1027&k=fHc7iL" target="_blank">383851010</a> <br />  -->
+			</div>
+	    </dd>
+	</dl>
+
+</div>
+</div>
+<include file="Pubilc:copyright" />
+</body>
